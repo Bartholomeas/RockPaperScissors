@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 90vh;
+    background-color: rgb(21, 18, 46);
+    color: aliceblue;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 250px auto;
+    // background-color: rgba(255, 255, 255, 0.5);
+}
+
+.score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    // background-color: gold;
+}
+
+.intro {
+    text-align: center;
+}
+
+.player-hand {
+    transform: scaleX(-1);
+}
+
+.battle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    margin: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    background-color: gold;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: rgb(21, 18, 46);
+    transition: transform .3s, color .3s;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: rgb(238, 203, 90);
+    }
+}
