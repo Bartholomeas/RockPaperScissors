@@ -4,17 +4,17 @@ const battle = document.querySelector('.battle');
 const playBtn = document.querySelector('.play-btn');
 
 const playerHand = document.querySelector('.player-hand');
-const playerScore = document.querySelectorAll('.player-score p');
+const playerScore = document.querySelector('.player-score p');
 
 const computerHand = document.querySelector('.computer-hand');
-const computerScore = document.querySelectorAll('.computer-score p');
+const computerScore = document.querySelector('.computer-score p');
 
 const options = document.querySelectorAll('.buttons button');
 
-let pScore = 0;
-let cScore = 0;
 // Starting the game |
 const game = () => {
+    let pScore = 0;
+    let cScore = 0;
 
     const startGame = () => {
         playBtn.addEventListener('click', () => {
@@ -36,10 +36,11 @@ const game = () => {
                 compareHands(e.target.textContent, computerChoice);
 
                 // Update images
-                playerHand.src = `./dist/img/${e.target.textContent}.png`
-                computerHand.src = `./dist/img/${computerChoice}.png`
+                playerHand.src = `./dist/img/${e.target.textContent}.png`;
+                computerHand.src = `./dist/img/${computerChoice}.png`;
 
-
+                playerHand.style.animation = 'shakePlayer 2s ease';
+                computerHand.style.animation = 'shakeComputer 2s ease';
             });
         });
     };

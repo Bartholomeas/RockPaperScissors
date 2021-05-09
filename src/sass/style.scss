@@ -79,3 +79,47 @@ button {
     opacity: 1;
     pointer-events: all;
 }
+
+@keyframes shakePlayer {
+    0% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+
+    25% {
+        transform: rotateY(180deg) translateY(-50px);
+    }
+
+    50% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+
+    75% {
+        transform: rotateY(180deg) translateY(-50px);
+    }
+
+    100% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakeComputer {
+    0% {
+        transform: translateY(0px);
+    }
+
+    25% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    75% {
+        transform: translateY(-50px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
